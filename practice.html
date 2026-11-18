@@ -1,22 +1,206 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web App</title>
+    <title>Taxpayer Portal</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Regular attributes take a value -->
-<img src="photo.jpg" alt="A mountain at sunset" width="800">
-<a href="/about" target="_blank">About us</a>
-<input type="email" id="user-email" name="email">
 
-<!-- Boolean attributes have no value — their presence alone means true -->
-<input type="checkbox" checked>
-<button disabled>Submit</button>
-<input type="text" required>
+</head>
+<body>
 
-  </head>
-  <body>
-    <!-- All visible content goes here -->
-  </body>
+    <header>
+        <h1>Taxpayer Portal</h1>
+        <p>Online Tax Services</p>
+        
+        <nav>
+            <a href="#">Home</a>
+            <a href="#[]">Tax Filing</a>
+            <a href="#">Payments</a>
+            <a href="#">Support</a>
+            <a href="#">About</a>
+        </nav>
+        
+        <br>
+        
+        <form>
+            <label for="search">Search the portal</label><br>
+            <input type="text" id="search" placeholder="e.g. VAT return">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <hr>
+
+    <main>
+        <section> 
+            <h2>Welcome to the Portal</h2>
+            
+            <p>
+                This online system allows registered taxpayers to <strong>file returns</strong>, <em>manage payments</em>, and track submissions online. The portal is designed to simplify communication between taxpayers and the tax authority.
+            </p>
+            
+            <p>
+                Use the navigation menu above to explore filing options, review your payment history, or contact support if you need assistance. 
+                <mark>New users must verify their email before submitting a first return.</mark>
+            </p>
+            
+            <p>
+      /          Filin/g types include <abbr title="Value Added Tax">VAT</abbr>, <abbr title="Corporate Income Tax">CIT</abbr>, and <abbr title="Personal Income Tax">PIT</abbrv>.
+            </p>
+            
+            <figure>
+                <img src="photo.jpg" alt="Taxpayer Dashboard — Q2 2026" width="600">
+                <figcaption>Figure 1: Overview of the taxpayer dashboard</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Announcement: VAT Filing Deadline Extended</h2>
+            <p>
+                The deadline for quarterly VAT filing has been extended by two weeks to accommodate the recent system maintenance window.
+            </p>
+            
+            <blockquote>
+                <em>All pending VAT submissions will now be accepted until the end of the month without penalty.</em>
+            </blockquote>
+            
+            <p>Source: <em>Portal Communications Team</em></p>
+            <p>Published: 20 July 2026</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Recent Filing Types</h2>
+            <p><strong>Filing status for the current period</strong></p>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Tax Type</th>
+                        <th>Filing Period</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>VAT</strong></td>
+                        <td>Q2 2026</td>
+                        <td>Submitted</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CIT</strong></td>
+                        <td>2025 Annual</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PIT</strong></td>
+                        <td>2025 Annual</td>
+                        <td>Draft</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p>
+                Overall filing completion this quarter: 
+                <progress value="70" max="100"></progress>
+            </p>
+            
+            <p>
+                Average review score for submitted filings: 
+                <progress value="8" max="10"></progress>
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Register a Payment</h2>
+            
+            <form>
+                <fieldset>
+                    <legend><strong>Personal details</strong></legend>
+                    <label for="fullname">Full Name</label><br>
+                    <input type="text" id="fullname" name="fullname"><br><br>
+                    
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email">
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Payment details</strong></legend>
+                    <label for="amount">Amount (OMR)</label><br>
+                    <input type="number" id="amount" name="amount" step="0.01"> Enter the amount in Omani Rials, up to two decimal places.<br><br>
+                    
+                    <label for="taxtype">Tax Type</label><br>
+                    <input type="text" id="taxtype" name="taxtype">
+                </fieldset>
+
+                <br>
+
+                <input type="checkbox" id="confirm" name="confirm">
+                <label for="confirm">I confirm the information above is accurate</label><br><br>
+
+                <button type="submit">Submit Payment</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Quick Links</h2>
+            <ol>
+                <li><a href="#">How to file a VAT return</a></li>
+                <li><a href="#">Payment methods accepted</a></li>
+                <li><a href="#">Download tax certificates</a></li>
+                <li><a href="#">Contact a support agent</a></li>
+            </ol>
+
+            <h3>Key Terms</h3>
+            <dl>
+                <dt><strong>VAT</strong></dt>
+                <dd>A tax added to most goods and services at the point of sale.</dd>
+                <br>
+                <dt><strong>Filing Period</strong></dt>
+                <dd>The date range a given return or payment covers.</dd>
+            </dl>
+
+            <h3>Frequently Asked Questions</h3>
+            <details>
+                <summary><strong>What happens if I miss a filing deadline?</strong></summary>
+                <p>Late filings may be subject to penalties depending on the duration of the delay.</p>
+            </details>
+            <br>
+            <details>
+                <summary><strong>Can I edit a submitted return?</strong></summary>
+                <p>Yes, you can file an amended return through the portal.</p>
+            </details>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Taxpayer Portal. All rights reserved.</p>
+        <p>
+            Support: <a href="mailto:support@example.com">support@example.com</a> | 
+            Phone: <a href="tel:+96812345678">+968 1234 5678</a>
+        </p>
+        <p>
+            <a href="#">Privacy Policy</a> &nbsp; 
+            <a href="#">Terms of Use</a> &nbsp; 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
 </html>
