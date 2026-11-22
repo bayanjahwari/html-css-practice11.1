@@ -6,6 +6,17 @@
 
 function getShippingCost(country, isExpress) {
   // your code
+
+const multiplier = isExpress ? 2 : 1;
+
+  switch (country) {
+    case "OM":
+      return 2 * multiplier;
+    case "AE":
+      return 5 * multiplier;
+    default:
+      return 15 * multiplier;
+  }
 }
 
 // Expected output:
